@@ -58,10 +58,8 @@ print(p_buy_no, p_buy_yes)
 
 # data.append()
 
-# for i in range(len(data[0])):
-#     print(data[5][i])
-    
-print(probablaty(data[0], 'youth', data[4], buy_yes, buy_no))
+for i in range(len(data[0])):
+    print(probablaty(data[i], data[4], 'youth', buy_yes, buy_no))
 
 # pro_age_yes, pro_age_no  = probablaty(data[0], data[4], "youth", buy_yes, buy_no)
 # pro_income_yes, pro_income_no  = probablaty(data[1], data[4], "mid", buy_yes, buy_no)
