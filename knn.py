@@ -2,7 +2,7 @@ import numpy as np
 
 data = [[7, 7], [7, 4], [3, 4], [1, 4]]
 
-k = 3
+k  = 3
 x1 = 3
 x2 = 7
 
