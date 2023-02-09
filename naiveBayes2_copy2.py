@@ -51,7 +51,7 @@ prob_of_no = number_of_no  / len(data[4])
 print("probablaty of no and yes", prob_of_no, prob_of_yes)
 
 prob_x_yes = 1
-prob_x_no = 1
+prob_x_no  = 1
 
 for i in range(len(x)):
     

@@ -1,4 +1,3 @@
-import numpy as np
 from collections import Counter
 from collections import OrderedDict
 
@@ -37,7 +36,7 @@ def checkSupport(data, support):
         
     for i in data:
             
-        if data.get(i) > support:
+        if data.get(i) >= support:
             newDic[i] = data.get(i)
 
     return newDic
@@ -52,19 +51,25 @@ def main(data, support):
             letter.append(j)
         
     
-    a = dict(Counter(letter))
+    a = dict(Counter(sorted(letter)))
     
-    while len(a) > 1:
-        print(a)
+    old = 0
+    while len(a) > 1 :
         a = checkSupport(a, support)
         
+        if a == old:
+            print("Result : ", a)
+            break
+
+        print(a)
+    
         a = merageData(a, data)
-        # print(a)
-    print(a)
+        old = a
+
         
         
     
-inp = ["ab", "abc", "cda", "dac", "dba"] 
+inp = ["acd", "bce", "abce", "be"] 
 
 support = 2
 main(inp, support)
